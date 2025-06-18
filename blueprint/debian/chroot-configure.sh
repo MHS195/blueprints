@@ -147,7 +147,7 @@ echo "  [*] Masking remount of /sys/kernel/debug..."
 ln -s /dev/null /etc/systemd/system/sys-kernel-debug.mount
 
 # root acount is unnecessary since default account + sudo is all set up
-passwd -dl root >/dev/null
+# passwd -dl root >/dev/null
 
 echo "[*] Optimizing rootfs..."
 
