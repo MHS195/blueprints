@@ -77,6 +77,7 @@ configure () {
 
     # make sure we've got a working nameserver
     # (on a fresh rootfs this may not be set correctly)
+    touch ${rootfs}/etc/resolv.conf
     echo "nameserver 8.8.8.8" > "${rootfs}/etc/resolv.conf"
 
     # make sure hostname is in /etc/hosts to avoid hostname resolution errors
