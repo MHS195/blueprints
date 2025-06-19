@@ -25,7 +25,7 @@
 
 set -e
 set -u
-
+git config --global --add safe.directory /var/maru
 readonly MARU_TAG="maru-g$(git rev-parse --short HEAD)"
 
 OPT_BLUEPRINT="debian"
