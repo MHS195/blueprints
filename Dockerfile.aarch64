@@ -1,5 +1,6 @@
 FROM debian:bookworm
 
+RUN echo 'deb http://deb.debian.org/debian bookworm-backports main' >> /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
     binfmt-support \
     debootstrap \
@@ -8,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     lxc \
     make \
     qemu-user-static \
-    ubuntu-archive-keyring \
+    ubuntu-keyring \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
