@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
-ENV MARU_WORKSPACE /var/maru
+ENV MARU_WORKSPACE=/var/maru
 RUN mkdir -p ${MARU_WORKSPACE}
 WORKDIR ${MARU_WORKSPACE}
 
